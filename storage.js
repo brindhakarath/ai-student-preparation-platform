@@ -1,0 +1,1 @@
+const S={get(k,d){try{const v=localStorage.getItem('iai_'+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem('iai_'+k,JSON.stringify(v))}catch(e){}},reset(){Object.keys(localStorage).filter(k=>k.startsWith('iai_')).forEach(k=>localStorage.removeItem(k))}};
